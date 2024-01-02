@@ -39,10 +39,10 @@ impl Encoding {
     #[cfg(feature = "fs")]
     pub(crate) fn to_file_extension(self) -> Option<&'static std::ffi::OsStr> {
         match self {
-            Encoding::Gzip => Some(std::ffi::OsStr::new(".gz")),
-            Encoding::Deflate => Some(std::ffi::OsStr::new(".zz")),
-            Encoding::Brotli => Some(std::ffi::OsStr::new(".br")),
-            Encoding::Zstd => Some(std::ffi::OsStr::new(".zst")),
+            Encoding::Gzip => Some(std::ffi::OsStr::new("")),
+            Encoding::Deflate => Some(std::ffi::OsStr::new("")),
+            Encoding::Brotli => Some(std::ffi::OsStr::new("")),
+            Encoding::Zstd => Some(std::ffi::OsStr::new("")),
             Encoding::Identity => None,
         }
     }
